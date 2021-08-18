@@ -11,7 +11,7 @@ To make a new test database you will need to do the following on the repo:
 
 2. 
 Add this to your spec helper file, before your required gem list
-
+``
 require_relative './setup_test_database'
 
 ENV['ENVIRONMENT'] = 'test'
@@ -21,5 +21,6 @@ RSpec.configure do |config|
     setup_test_database
   end
 end
+``
 
 3. Remember to put any sql used to create tables in db/migrations
