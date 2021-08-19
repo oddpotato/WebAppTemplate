@@ -11,20 +11,19 @@ To make a new test database you will need to do the following on the repo:
 
 1. Edit the 'setup test database' file to contain the correct database name
 
-2. 
-Add this to your spec helper file, before your required gem list
+2. Add this to your spec helper file, before your required gem list
 
-    require_relative './setup_test_database'
+        require_relative './setup_test_database'
 
-    ENV['ENVIRONMENT'] = 'test'
+        ENV['ENVIRONMENT'] = 'test'
 
-    RSpec.configure do |config|
-      config.before(:each) do
-        setup_test_database
-      end
-    end
+        RSpec.configure do |config|
+          config.before(:each) do
+            setup_test_database
+          end
+        end
 
 
 3. Remember to put any sql used to create tables in db/migrations
 
-4
+4. Update the App name in config.ru (run <appname>)
